@@ -13,12 +13,14 @@ ld x9,c3(x0)
 ecall x9,x9,5 // inp int into x9
 addi x10,x9,-1 // dup minus 1
 addi x12,x0,1
+
 loop:
 beq x10,x0,end
 add x11,x11,x12
 addi x12,x12,1
 addi x10,x10,-1
 jal x0,loop
+
 end: 
 ld x13,c4(x0)
 ecall x14,x13,3
