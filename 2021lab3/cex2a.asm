@@ -14,5 +14,6 @@ addi x5,x5,-1
 jal x0,loop
 
 end:
+ecall x0,f4,1
 fsd f4,m(x9)
 m: DM 1
