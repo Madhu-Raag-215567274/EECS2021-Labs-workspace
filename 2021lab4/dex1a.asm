@@ -28,17 +28,18 @@ beq x0,x0,zero
 
 one:
 sd x10, 0(sp)
-addi sp, sp, -8
+addi sp, sp, -8
+
 DIV x5,x5,x9
 addi x14,x14,1
-
-7jal x0,loop
+jal x0,loop
 
 
 
 zero:
 sd x11,0(sp)
-addi sp, sp, -8
+addi sp, sp, -8
+
 div x5,x5,x9
 addi x14,x14,1
 
@@ -46,7 +47,8 @@ jal x0,loop
 
 end:
 beq x14,x0,realend
-addi sp, sp, 8
+addi sp, sp, 8
+
 ld x13, 0(sp)
 ecall x1,x13,0
 addi x14,x14,-1
